@@ -1,0 +1,12 @@
+---
+apiVersion: sources.eventing.knative.dev/v1alpha1
+kind: ContainerSource
+metadata:
+  name: vegeta
+spec:
+  image: github.com/anatoliyfedorenko/vegeta_testing
+  sink:
+    apiVersion: api.of.the.source
+    kind: YourKind
+    name: test
+    namespace: your-namespace
